@@ -33,7 +33,7 @@ section {
 
 header {
 	position: absolute;
-	top: -2rem;
+	top: -2.5rem;
 	right: 1rem;
 	left: 1rem;
 	padding: 1rem 3rem;
@@ -62,14 +62,14 @@ header ul {
 
 header ul li {
 	list-style: none;
-	margin: 0 10px;
+	margin: 0 0.8rem;
 }
 
 header ul li a {
 	text-decoration: none;
 	font-weight: 500;
 	color: #8a2435;
-	padding: 8px 15px;
+	padding: 0.6rem 1rem;
 	border-radius: 2rem;
 }
 
@@ -80,8 +80,8 @@ header ul li a.active {
 }
 
 .content {
-	transform: translateX(-1rem);
-	min-width: 35rem;
+	transform: translateX(-6rem);
+	min-width: 43rem;
 	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 	border-radius: 1.5rem;
 	backdrop-filter: blur(10px);
@@ -89,16 +89,16 @@ header ul li a.active {
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	border-left: 1px solid rgba(255, 255, 255, 0.5);
 	padding: 2.4rem;
-	padding-left: 3rem;
+	padding-left: 7rem;
 }
 
 .content h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 	color: #8a2435;
 }
 
 .content p {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: #8a2435;
 }
 
@@ -109,30 +109,30 @@ header ul li a.active {
 	color: #8a2435;
 	margin-top: 1rem;
 	border-radius: 2rem;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 500;
 	text-decoration: none;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .imgBx img {
-	width: 20rem;
+	max-width: 25rem;
 	animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
 	0%,
 	100% {
-		transform: translateY(50px);
+		transform: translateY(3rem);
 	}
 	50% {
-		transform: translateY(100px);
+		transform: translateY(6rem);
 	}
 }
 
 .sci {
 	position: absolute;
-	right: -25px;
+	right: -1.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -145,14 +145,14 @@ header ul li a.active {
 
 .sci li a {
 	text-decoration: none;
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 	background: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	margin: 5px 0;
+	margin: 0.3rem 0;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -167,8 +167,8 @@ header ul li a.active {
 
 .copyrightText {
 	position: absolute;
-	bottom: 30px;
-	left: 50px;
+	bottom: 2rem;
+	left: 3rem;
 	color: #8a2435;
 }
 
@@ -176,4 +176,105 @@ header ul li a.active {
 	text-decoration: none;
 	color: #8a2435;
 	font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		position: relative;
+		width: calc(100% - 1rem);
+	}
+}
+
+@media (max-width: 1100px) {
+	section {
+		padding: 3rem 0.8rem 0.8rem;
+	}
+
+	.container {
+		flex-direction: column;
+		height: auto;
+		padding: 1rem;
+	}
+
+	.content {
+		transform: translateX(0px);
+		min-width: 100%;
+		padding: 2rem;
+		margin-top: -2.5rem;
+	}
+
+	header {
+		position: relative;
+		flex-direction: column;
+		width: 100%;
+		top: -3.5rem;
+		left: 0;
+		padding: 1rem;
+	}
+
+	header ul {
+		margin-top: 0.8rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	header ul li {
+		margin: 0.3rem;
+	}
+
+	header ul li a {
+		display: inline-block;
+	}
+
+	.imgBx {
+		margin-bottom: 3rem;
+	}
+
+	.content a {
+		font-size: 1rem;
+		padding: 0.8rem 1rem;
+	}
+
+	@keyframes animate {
+		0%,
+		100% {
+			transform: translateY(-1rem);
+		}
+		50% {
+			transform: translateY(1rem);
+		}
+	}
+
+	.sci {
+		position: relative;
+		flex-direction: row;
+		left: 0;
+	}
+
+	.sci li a {
+		margin: 0 0.8rem;
+	}
+
+	.copyrightText {
+		position: relative;
+		bottom: initial;
+		left: inherit;
+		width: 100%;
+		text-align: center;
+		margin-top: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.content h2 {
+		font-size: 1.5rem;
+	}
+
+	.content p {
+		font-size: 1rem;
+	}
+
+	.imgBx img {
+		max-width: 18rem;
+	}
 }
